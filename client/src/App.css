@@ -1,0 +1,22 @@
+.container{
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+}
+
+.list-items ul{
+  display: flex;
+  list-style: none;
+}
+
+.list-items ul li a{
+  text-decoration: none;
+  padding: 14px 20px;
+}
+
+
+.register{
+  display: flex;
+  justify-content: center;
+
+}

@@ -13,7 +13,7 @@ export const registerController=async(req,res)=>{
         if(exituser) return res.status(200).send({message: "user exist already"});
 
         const hashedPassword= await hashPassword(password);
-        const user= await usermondel({email,password:hashedPassword,name}).save();
+        const user= await usermodel({email,password:hashedPassword,name}).save();
         res.status(201).send({
             success:true,
             message:"successfully",
@@ -46,7 +46,7 @@ export const loginController=async(req,res)=>{
             })
         }
        
-        const user= usermodel.findOne({email});
+        const user= await usermodel.findOne({email});
         console.log(`password ${password},user.password ${user.password}`);
 
         if(!user) return res.status(404).send({succcess:false,message:"email is not registered"});
@@ -72,6 +72,11 @@ export const loginController=async(req,res)=>{
         message:"error in login"
         })
     }
+}
+
+export const testController=(req,res)=>{
+    console.log("protected route");
+
 }
 
 
