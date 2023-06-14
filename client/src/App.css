@@ -19,4 +19,22 @@
   display: flex;
   justify-content: center;
 
+
+}
+
+.form-register{
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto;
+  justify-content: center;
+}
+
+.form-register div{
+  margin: auto;
+  padding: 14px;
+}
+
+.form-register .btn{
+  display: flex;
+  margin: auto;
 }

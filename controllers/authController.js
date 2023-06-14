@@ -5,6 +5,7 @@ export const registerController=async(req,res)=>{
     try{
 
         const {name,email,password}=req.body;
+        console.log(req.body)
         if(!name) return res.send({success:false,message:"name is required"});
         if(!email) return res.send({success:false,message:"email is required"});
         if(!password) return res.send({success:false,message:"password is required"});
@@ -18,7 +19,10 @@ export const registerController=async(req,res)=>{
             success:true,
             message:"successfully",
             user
+          
+
         })
+       
 
 
     }
